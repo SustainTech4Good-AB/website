@@ -1,5 +1,5 @@
 {
   "platforms": {
-    "nodejs": "20.11.x"
+    "nodejs": "20"
   }
 }
