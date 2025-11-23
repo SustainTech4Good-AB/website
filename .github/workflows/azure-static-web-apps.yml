@@ -35,6 +35,7 @@ jobs:
           app_location: /
           output_location: .next
           skip_app_build: true
+          api_runtime: "node:20"
 
   close_pull_request:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
