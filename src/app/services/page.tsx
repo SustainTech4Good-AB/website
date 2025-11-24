@@ -3,35 +3,38 @@ import { ArrowRight, Briefcase, Factory, Leaf } from "lucide-react"
 const services = [
   {
     title: "Klimatstrategi & färdplaner",
-    description: "Hjälp att skapa konkreta vägar mot klimatneutralitet genom analys, rådgivning och ledning.",
+    description: "Konkreta vägar mot klimatneutralitet – analys, prioriterad färdplan och ledningsstöd.",
     Icon: Leaf,
-    outcomes: ["Nulägesanalys och KPI:er", "Prioriterad färdplan", "Ledningsstöd & rapportering"],
+    outcomes: [
+      "Nulägesanalys och KPI:er",
+      "Prioriterad färdplan och investeringscase",
+      "Ledningsstöd och rapportering",
+    ],
   },
   {
     title: "CCUS & energianalys",
     description: "Tekniska och ekonomiska analyser för CO₂-infångning, energieffektivisering och processoptimering.",
     Icon: Factory,
-    outcomes: ["Teknik- och investeringscase", "Energibalanser & scenarier", "Processoptimering"],
+    outcomes: ["Teknik- och investeringscase", "Energibalanser och scenarier", "Processoptimering och risker"],
   },
   {
-    title: "Projektledning & interim",
-    description:
-      "Tillfällig ledningskompetens inom operativ verksamhet, hållbarhet och teknik, baserat på över 30 års erfarenhet.",
+    title: "Operativt stöd & interim",
+    description: "Interim ledningskompetens inom verksamhet, hållbarhet och teknik – fokus på genomförande och överlämning.",
     Icon: Briefcase,
-    outcomes: ["Styrgrupp och PMO", "Operativ förändringsledning", "Kunskapsöverföring"],
+    outcomes: ["Styrgrupp och PMO", "Operativ förändringsledning", "Kunskapsöverföring till team"],
   },
 ]
 
 const engagementModels = [
   {
-    title: "Accelerator (4–6 veckor)",
+    title: "Definierat uppdrag (tidsplan sätts per uppdrag)",
     description: "Snabb etablering av klimatstrategi eller CCUS-roadmap – med handover till ert team.",
     deliverables: ["Baseline & KPI:er", "Färdplan & business case", "Workshop med ledningen"],
   },
   {
-    title: "Managed transformation",
-    description: "Löpande partnerskap där jag driver implementation, utbildning och rapportering.",
-    deliverables: ["Programledning", "Implementering och uppföljning", "Dashboards & rapporter"],
+    title: "Löpande stöd",
+    description: "Löpande stöd där jag driver implementering, utbildning och rapportering.",
+    deliverables: ["Programledning", "Implementering och uppföljning", "Rapporter & beslutsunderlag"],
   },
   {
     title: "Advisory on demand",
@@ -41,10 +44,10 @@ const engagementModels = [
 ]
 
 const metrics = [
-  { label: "CO₂-reduktion", value: "-45% i snitt" },
-  { label: "Time-to-impact", value: "8–12 veckor" },
-  { label: "Ledningsstöd", value: "C-level & styrelse" },
-  { label: "Industriprojekt", value: "50+" },
+  { label: "Erfarenhet", value: "30+ år operativt" },
+  { label: "Fokus", value: "Tillverkande industri" },
+  { label: "Time-to-impact", value: "Sätts per uppdrag" },
+  { label: "Arbetssätt", value: "KPI:er & investeringscase" },
 ]
 
 export default function Services() {
@@ -54,8 +57,7 @@ export default function Services() {
         <p className="text-sm font-semibold uppercase tracking-[0.4em] text-emerald-600">Tjänster</p>
         <h1 className="text-4xl font-semibold text-slate-900">Expertis för klimatneutral industri</h1>
         <p className="mx-auto max-w-3xl text-base text-slate-600">
-          Jag designar och leder program som förenar klimatmål och affärsnytta. All rådgivning utgår från tydliga KPI:er,
-          investeringskrav och uppföljning mot CSRD och andra regelverk.
+          Jag designar och leder program som förenar klimatmål och affärsnytta.
         </p>
       </section>
 
@@ -85,10 +87,10 @@ export default function Services() {
       <section className="grid gap-6 rounded-[32px] border border-white/60 bg-white/90 p-8 shadow-xl lg:grid-cols-[1.2fr_0.8fr]">
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">Resultat</p>
-          <h2 className="text-3xl font-semibold text-slate-900">Från arkitektur till realiserad nytta</h2>
+          <h2 className="text-3xl font-semibold text-slate-900">Från plan till genomförande</h2>
           <p className="text-base text-slate-600">
-            Varje uppdrag startar med en tydlig baseline och målbild. Vi arbetar i korta iterationer och visualiserar
-            framsteg och ROI genom dashboards och rapporter.
+            Varje uppdrag startar med en tydlig baseline och målbild. Vi arbetar i korta iterationer och rapporterar
+            framsteg med beslutsunderlag som går att agera på.
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             {metrics.map((metric) => (
@@ -104,15 +106,15 @@ export default function Services() {
           <ul className="space-y-4 text-sm text-slate-100">
             <li className="flex gap-3">
               <ArrowRight className="size-4 flex-none text-emerald-300" />
-              Modulariserade ramverk som gör att ni kan växa utan att bygga om grunden.
+              Konkreta färdplaner med KPI:er, beslutspunkter och investeringscase.
             </li>
             <li className="flex gap-3">
               <ArrowRight className="size-4 flex-none text-emerald-300" />
-              Dashboard för ekonomi, adoption och hållbarhet i samma vy.
+              Beslutsunderlag, workshops och interimt stöd för ledning och styrelse.
             </li>
-            <li className="flex gap-3">
+             <li className="flex gap-3">
               <ArrowRight className="size-4 flex-none text-emerald-300" />
-              Automatiserade guardrails i hela organisationen.
+              Implementering i samarbete med ert team.
             </li>
           </ul>
         </div>

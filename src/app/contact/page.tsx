@@ -63,7 +63,7 @@ export default function Contact() {
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full bg-emerald-500 px-8 text-base text-white">
-                <Link href="mailto:info@stfgab.se">Skicka e-post</Link>
+                <Link href="mailto:ingrid.engstrom@stfgab.se">Skicka e-post</Link>
               </Button>
               <Button
                 asChild

@@ -1,20 +1,17 @@
-import Link from "next/link"
 import Image from "next/image"
-import {
-  ArrowRight,
-  Leaf,
-  Factory,
-  Briefcase,
-  LineChart,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, Briefcase, Factory, Leaf, ShieldCheck, Sparkles } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
 const heroStats = [
   { value: "30+ år", label: "Operativ erfarenhet i industrin" },
   { value: "100%", label: "Fokus på minskat klimatavtryck" },
+]
+
+const heroAssignments = [
+  { title: "Datadrivna beslut", desc: "Konkreta färdplaner med tydliga KPI:er." },
+  { title: "Projektledning", desc: "Genomförande med kompetens inom CCUS." },
 ]
 
 const services = [
@@ -38,12 +35,6 @@ const services = [
   },
 ]
 
-const pillars = [
-  { title: "Teknik", description: "Robusta lösningar inom CCUS, energi och digitalisering." },
-  { title: "Strategi", description: "Affärsnära rådgivning som förankrar hållbarhet i ledningen." },
-  { title: "Hållbarhet", description: "Mätbara resultat och rapportering mot klimatmål." },
-]
-
 const process = [
   "Datadriven nulägesanalys av klimatpåverkan och affärskritiska processer.",
   "Prioriterad färdplan med tydliga delmål, budget och beslutspunkter.",
@@ -61,15 +52,14 @@ const focusAreas = [
     description: "Executive briefings, beslutsunderlag och investeringscase för styrelse och ägare.",
   },
   {
-  title: "Praktiskt genomförbara åtgärder",
-  description: "Effektivisering, investeringar och konkreta förbättringsinsatser som snabbt skapar värde i verksamheten."
-},
-{
-  title: "Rådgivare för industri och offentlig verksamhet",
-  description: "Specialiserad rådgivning baserat på 30 års erfarenhet inom pappers- och massaindustrin som stödjer företag och offentliga verksamheter."
-}
-
-
+    title: "Praktiskt genomförbara åtgärder",
+    description: "Effektivisering, investeringar och konkreta förbättringsinsatser som snabbt skapar värde i verksamheten.",
+  },
+  {
+    title: "Rådgivare för industri och offentlig verksamhet",
+    description:
+      "Specialiserad rådgivning baserat på 30 års erfarenhet inom pappers- och massaindustrin som stödjer företag och offentliga verksamheter.",
+  },
 ]
 
 export default function Home() {
@@ -77,13 +67,7 @@ export default function Home() {
     <div className="space-y-24">
       <section className="relative overflow-hidden rounded-[32px] border border-white/40 bg-slate-950 text-white shadow-[0_35px_120px_rgba(15,23,42,0.4)]">
         <div className="absolute inset-0">
-          <Image
-            src="/hero.jpg"
-            alt="Rapsfält"
-            fill
-            priority
-            className="object-cover brightness-[0.85]"
-          />
+          <Image src="/hero.jpg" alt="Rapsfält" fill priority className="object-cover brightness-[0.85]" />
           <div className="absolute inset-0 bg-gradient-to-br from-green-900/70 via-slate-900/60 to-slate-950/70" />
           <div className="absolute left-1/2 top-1/2 size-[580px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400/20 blur-3xl" />
         </div>
@@ -132,24 +116,23 @@ export default function Home() {
           </div>
 
           <div className="space-y-6 rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-md">
-            <div className="flex items-center gap-3 rounded-2xl border border-white/20 bg-white/5 p-4">
-              <Sparkles className="size-10 rounded-2xl bg-emerald-500/20 p-2 text-emerald-200" />
-              <div>
+            <div className="space-y-3 rounded-3xl border border-white/20 bg-white/5 p-4">
+              <div className="flex items-center gap-3">
+                <Sparkles className="size-10 rounded-2xl bg-emerald-500/20 p-2 text-emerald-200" />
                 <p className="text-sm uppercase tracking-[0.3em] text-emerald-200">Uppdrag</p>
-                <p className="text-lg font-semibold text-white">Datadrivna beslut</p>
-                <p className="text-sm text-slate-200">
-                  Konkreta färdplaner med tydliga KPI:er
-                </p>
-                <p className="text-lg font-semibold text-white">Projektledning</p>
-                <p className="text-sm text-slate-200">
-                  Med kompetens inom CCUS.
-                </p>
+              </div>
+              <div className="space-y-3">
+                {heroAssignments.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-white/20 bg-white/5 p-3">
+                    <p className="text-base font-semibold text-white">{item.title}</p>
+                    <p className="text-sm text-slate-200">{item.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
+
             <div className="rounded-3xl border border-white/20 bg-white/5 p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-emerald-200">
-                Vad du får
-              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.4em] text-emerald-200">Vad du får</p>
               <ul className="mt-4 space-y-3 text-sm text-slate-100">
                 <li className="flex gap-3">
                   <ShieldCheck className="size-5 flex-none text-emerald-300" />
@@ -166,9 +149,9 @@ export default function Home() {
       </section>
 
       <section className="space-y-8" id="tjanster">
-        <div className="mx-auto max-w-3xl text-center space-y-4">
+        <div className="mx-auto max-w-3xl space-y-4 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.4em] text-emerald-600">
-            Teknik · Strategi · Hållbarhet
+            Teknik • Strategi • Hållbarhet
           </p>
           <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">
             Jag erbjuder strategisk rådgivning inom industriell omställning och klimatstrategi för tillverkande företag
@@ -224,7 +207,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
         </div>
       </section>
 
@@ -245,14 +227,14 @@ export default function Home() {
               <div>
                 <p className="text-xs uppercase tracking-[0.4em] text-emerald-100">Direktkontakt</p>
                 <p className="mt-2 text-xl font-semibold">Ingrid Engström</p>
-                <p className="text-sm text-emerald-100">Grundare · SustainTech4Good AB</p>
+                <p className="text-sm text-emerald-100">Grundare • SustainTech4Good AB</p>
               </div>
               <ShieldCheck className="size-14 rounded-3xl bg-white/10 p-3 text-white" />
             </div>
             <div className="mt-6 space-y-3 text-sm">
               <p className="text-emerald-50">ingrid.engstrom@stfgab.se</p>
               <p className="text-emerald-50">Org.nr 559549-1761</p>
-              <p className="text-emerald-50">Bas i Örebro · Tillverkande industri i Norden</p>
+              <p className="text-emerald-50">Bas i Örebro • Tillverkande industri i Norden</p>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full bg-white px-8 text-base font-semibold text-emerald-700">

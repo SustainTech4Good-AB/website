@@ -32,7 +32,7 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.4em] text-slate-400">Kontakt</h3>
             <ul className="mt-4 space-y-2 text-sm">
-              <li className="text-slate-100">info@stfgab.se</li>
+              <li className="text-slate-100">ingrid.engstrom@stfgab.se</li>
               <li className="text-slate-100">Org.nr 559549-1761</li>
               <li className="text-slate-400">Tillverkande industri · Sverige</li>
             </ul>
