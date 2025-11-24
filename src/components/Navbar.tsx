@@ -63,7 +63,9 @@ export function Navbar() {
               size="sm"
               className="rounded-full bg-emerald-500 px-6 text-white shadow-lg shadow-emerald-500/30"
             >
-              <Link href="/contact">Boka samtal</Link>
+              <Link href="/contact" onClick={() => setIsOpen(false)}>
+                Boka samtal
+              </Link>
             </Button>
           </div>
         </div>
