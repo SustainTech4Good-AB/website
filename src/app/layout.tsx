@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+
 import "./globals.css"
 import { CookieBanner } from "@/components/CookieBanner"
 import { Footer } from "@/components/Footer"
@@ -20,7 +21,11 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/logo.png", type: "image/png", sizes: "256x256" },
+    ],
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: siteName,
